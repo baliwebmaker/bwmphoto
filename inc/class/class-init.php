@@ -64,7 +64,9 @@ class Init {
 
 		// filters.
 		add_filter( 'excerpt_length', array( $this, 'excerpt_length' ) );
-		add_filter( 'excerpt_more', array( $this, 'excerpt_elipsis' ) ); 
+		add_filter( 'excerpt_more', array( $this, 'excerpt_elipsis' ) );
+		add_filter( 'render_block', array( $this, 'add_nav_top_mobile'), 10, 2 );
+
 	}
 
 	 
@@ -256,7 +258,7 @@ public function enqueue_scripts() {
 
 	//DROP DOWN SUBMENU IN MOBILE
 	public function add_nav_top_mobile( $content, array $block ) {
-  if ( ! has_classname( 'is-nav-top-mobile', $block )  ) {
+  if ( ! $this->has_classname( 'is-nav-top-mobile', $block )  ) {
     return $content;
   }
     $script = "<script>
@@ -296,7 +298,6 @@ public function enqueue_scripts() {
 
     return $content;
 }
-add_filter( 'render_block', 'add_nav_top_mobile', 10, 2 );
 
 	public function has_classname( string $classname, array $block ):  bool {
 	  if ( empty( $block['attrs'] ) ) {
