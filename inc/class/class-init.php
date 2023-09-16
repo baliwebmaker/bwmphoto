@@ -167,7 +167,7 @@ public function enqueue_scripts() {
 		wp_enqueue_style( 'bwmphoto-style', get_stylesheet_uri(), array(), BWM_PHOTO_VERSION );
 		wp_add_inline_style( 'bwmphoto-style', $this->load_font_styles() );
 
-			wp_enqueue_style(
+		wp_enqueue_style(
 		'blwbmkr-shared-styles',
 		get_theme_file_uri( 'assets/css/min/style-shared.min.css' ),
 		[],
@@ -215,7 +215,7 @@ public function enqueue_scripts() {
 	 */
 	public function theme_config() {
 		return array(
-			'demo'    => esc_url( 'https:/gutenverse.com/demo?name=bwmphoto' ),
+			'demo'    => esc_url( 'https://baliwebmaker.com' ),
 			'pages'   => array(
 				'home'     => BWM_PHOTO_URI . '/assets/img/page-home.webp',
 				'about'    => BWM_PHOTO_URI . '/assets/img/page-about.webp',
@@ -258,20 +258,26 @@ public function enqueue_scripts() {
 
 	//DROP DOWN SUBMENU IN MOBILE
 	public function add_nav_top_mobile( $content, array $block ) {
-  if ( ! $this->has_classname( 'is-nav-top-mobile', $block )  ) {
+  if ( ! $this->has_classname( 'is-style-nav-top-mobile', $block )  ) {
     return $content;
   }
     $script = "<script>
-    const items = document.querySelectorAll('.is-nav-top-mobile button');
-    items[0].addEventListener('click', e => {
-    e.target.nextElementSibling.style.display = 'block';
-    })
+    const items = document.querySelectorAll('.is-style-nav-top-mobile button');
+
+    items[0].addEventListener('click', e => { 
+    e.target.nextElementSibling.style.width = '100%';
+    console.log(e.target.nextElementSibling);
+    });
+    const closing = document.querySelectorAll('.is-style-nav-top-mobile .wp-block-navigation__responsive-container')
+    items[1].addEventListener('click', e => { 
+    closing[0].style.width = '0';
+    });
 
     function openWoi(e){
         if (e.style.maxHeight){
-                  e.style.maxHeight = null;
-                } else {
-                  e.style.maxHeight = e.scrollHeight + 'px';
+          e.style.maxHeight = null;
+        } else {
+          e.style.maxHeight = e.scrollHeight + 'px';
         } 
     }
 
@@ -279,7 +285,6 @@ public function enqueue_scripts() {
 
     var i;
     for (i = 0; i < coll.length; i++) {
-
 
     coll[i].previousElementSibling.addEventListener('click', function()  { 
         this.nextElementSibling.classList.toggle('active');

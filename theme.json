@@ -23,67 +23,67 @@
 				{
 					"color": "#343333",
 					"name": "Primary",
-					"slug": "photology-primary"
+					"slug": "bwmphoto-primary"
 				},
 				{
 					"color": "#FFFFFF",
 					"name": "Secondary",
-					"slug": "photology-secondary"
+					"slug": "bwmphoto-secondary"
 				},
 				{
 					"color": "#916C3D",
 					"name": "Brown",
-					"slug": "photology-brown"
+					"slug": "bwmphoto-brown"
 				},
 				{
 					"color": "#D1C8BB",
 					"name": "Brown Soft",
-					"slug": "photology-brown-soft"
+					"slug": "bwmphoto-brown-soft"
 				},
 				{
 					"color": "#8B8B8B",
 					"name": "Text",
-					"slug": "photology-text"
+					"slug": "bwmphoto-text"
 				},
 				{
 					"color": "#C2BABB",
 					"name": "Text Hero",
-					"slug": "photology-text-hero"
+					"slug": "bwmphoto-text-hero"
 				},
 				{
 					"color": "#949494",
 					"name": "Text Footer",
-					"slug": "photology-text-footer"
+					"slug": "bwmphoto-text-footer"
 				},
 				{
 					"color": "#F8F8F8",
 					"name": "Soft Grey",
-					"slug": "photology-soft-grey"
+					"slug": "bwmphoto-soft-grey"
 				},
 				{
 					"color": "#000000b3",
 					"name": "Overlay",
-					"slug": "photology-overlay"
+					"slug": "bwmphoto-overlay"
 				},
 				{
 					"color": "#262626",
 					"name": "Border Dark",
-					"slug": "photology-border-dark"
+					"slug": "bwmphoto-border-dark"
 				},
 				{
 					"color": "#030303",
 					"name": "Background Overlay",
-					"slug": "photology-bg-overlay"
+					"slug": "bwmphoto-bg-overlay"
 				},
 				{
 					"color": "#E9E9E9",
 					"name": "Background Grey",
-					"slug": "photology-bg-grey"
+					"slug": "bwmphoto-bg-grey"
 				},
 				{
 					"color": "#F1F1F1",
 					"name": "Quote",
-					"slug": "photology-quote"
+					"slug": "bwmphoto-quote"
 				}
 			]
 		},

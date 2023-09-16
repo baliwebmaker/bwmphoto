@@ -101,5 +101,21 @@ class Block_Styles {
 				'label' => __( 'Box Shadow on Hover', 'bwmphoto' ),
 			)
 		);
+
+		register_block_style(
+			'core/navigation',
+			array(
+				'name'  => 'nav-top-desktop',
+				'label' => __( 'Desktop Nav', 'bwmphoto' ),
+			)
+		);
+
+		register_block_style(
+			'core/navigation',
+			array(
+				'name'  => 'nav-top-mobile',
+				'label' => __( 'Mobile Nav', 'bwmphoto' ),
+			)
+		);
 	}
 }

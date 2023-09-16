@@ -1,0 +1,93 @@
+/* Change the WordPress default css breakpoints media query */
+@media ( min-width: 782px ) {
+ .wp-block-navigation.is-style-nav-top-mobile {
+  display: none;
+ }
+ .wp-block-navigation .wp-block-navigation__submenu-container{
+ 	border-top:2px solid blueviolet !important; 
+
+ }
+	.wp-block-navigation.is-style-nav-top-desktop ul::before {
+	  height: 2rem;
+	  left: 0;
+	  right: 0;
+	  content: "";
+	  display: block;
+	  position: absolute;
+	  bottom: 100%;
+	}
+	.wp-block-navigation .has-child .wp-block-navigation__submenu-container{ 
+		top: calc(100% + 1.4rem) !important; 
+ 		left: auto;
+  	right: 0;
+	}
+}
+ 
+
+@media ( max-width: 781px ) {
+	.wp-block-navigation.is-style-nav-top-desktop {
+	  display: none;
+	} 
+
+	.wp-block-navigation__responsive-close {
+	    width: 100%;
+	    padding-top: 2em;
+	}
+
+	ul.wp-block-navigation__container{
+		padding-top: 2em;
+		width: 100%;
+	}
+	
+	.wp-block-navigation.is-style-nav-top-mobile .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-navigation__submenu-icon {
+		display: block;
+    position: absolute;
+    right: 0;
+    padding-top: 0.633em;
+	}
+	
+	.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__submenu-container.wp-block-navigation__submenu-container.wp-block-navigation__submenu-container.wp-block-navigation__submenu-container{
+		max-height: 0;
+  	overflow: hidden;
+  	transition: max-height 0.2s ease-out;
+	}
+ 
+.wp-block-navigation.is-style-nav-top-mobile .wp-block-navigation__responsive-container {
+		height: 100%;
+		width: 0;
+		left:auto;
+		top:0;
+		right:0;
+		transition: 0.2s;
+		overflow-x: hidden;
+		display: block;
+		padding-top: 2.45em;background-color: #333; 
+	}
+
+.wp-block-navigation__responsive-container .wp-block-navigation__responsive-container-content{
+	  padding-top: calc(2rem + 24px);
+	}
+	.wp-block-navigation.is-style-nav-top-mobile .wp-block-navigation__responsive-dialog{ 
+		gap:inherit; 
+	}
+	.wp-block-navigation.is-style-nav-top-mobile :where(.wp-block-navigation.has-background .wp-block-navigation-item a:not(.wp-element-button)){
+		padding: 0;
+	}
+}
+ul.is-style-nav-top-desktop li a:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ccc;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+ul.is-style-nav-top-desktop li a:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.wp-block-navigation__responsive-container { z-index:99999; }
